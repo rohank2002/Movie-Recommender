@@ -1,0 +1,141 @@
+<% layout('layout') -%>
+
+ <div class="container-fluid">
+     <div class="row">
+        <h3>Top Imdb Movies</h3>
+        <% for(var i = 0; i < topMovies.length; i++) { %>
+        <div class="col-md-3 card p-5">
+            <a href="/products/<%= topMovies[i]._id %>">
+                <div class="no-border" align="center">
+                    <img src="<%= topMovies[i].Image %>" style="width:170px;height:120px;">
+                    <div class="caption" align="center">
+                        <!-- <h3> <%= products[i].ProductName %> </h3> -->
+                        <!-- <p>$<%= products[i].Price %> </p> -->
+                        <!-- <a href="/reviews/<%= topMovies[i]._id %>" >
+                            <input type="reviews" value="Reviews" class="btn btn-primary btn-block pb-2" style="width:100px;height:30px;">
+                        </a> -->
+
+                    </br>
+                    </div>
+                    <div class="pt-5"></div>
+                </div>
+            </a>
+        </div>
+        <% } %> 
+    </div>
+
+    <div class="row">
+        <h3>Recent Movies</h3>
+            <% for(var i = 0; i < recentMovies.length; i++) { %>
+            <div class="col-md-3 card p-5">
+                <a href="/products/<%= recentMovies[i]._id %>">
+                    <div class="no-border" align="center">
+                        <img src="<%= recentMovies[i].Image %>" style="width:170px;height:120px;">
+                        <div class="caption" align="center">
+                            <!-- <h3> <%= products[i].ProductName %> </h3> -->
+                            <!-- <p>$<%= products[i].Price %> </p> -->
+                            <!-- <a href="/reviews/<%= recentMovies[i]._id %>" >
+                                <input type="reviews" value="Reviews" class="btn btn-primary btn-block pb-2" style="width:100px;height:30px;">
+                            </a> -->
+                        </br>
+                        </div>
+                        <div class="pt-5"></div>
+                    </div>
+                </a>
+            </div>
+            <% } %> 
+        </div>
+
+
+        <div class="row">
+                <h3>Comedy Movies</h3>
+                <% for(var i = 0; i < comedyMovies.length; i++) { %>
+                <div class="col-md-3 card p-5">
+                    <a href="/products/<%= comedyMovies[i]._id %>">
+                        <div class="no-border" align="center">
+                            <img src="<%= comedyMovies[i].Image %>" style="width:170px;height:120px;">
+                            <div class="caption" align="center">
+                                <!-- <h3> <%= products[i].ProductName %> </h3> -->
+                                <!-- <p>$<%= products[i].Price %> </p> -->
+                                <!-- <a href="/reviews/<%= comedyMovies[i]._id %>" >
+                                    <input type="reviews" value="Reviews" class="btn btn-primary btn-block pb-2" style="width:100px;height:30px;">
+                                </a> -->
+                            </br>
+                            </div>
+                            <div class="pt-5"></div>
+                        </div>
+                    </a>
+                </div>
+                <% } %> 
+            </div>
+
+            <div class="row">
+                    <h3>Action Movies</h3>
+                    <% for(var i = 0; i < actionMovies.length; i++) { %>
+                    <div class="col-md-3 card p-5">
+                        <a href="/products/<%= actionMovies[i]._id %>">
+                            <div class="no-border" align="center">
+                                <img src="<%= actionMovies[i].Image %>" style="width:170px;height:120px;">
+                                <div class="caption" align="center">
+                                    <!-- <h3> <%= products[i].ProductName %> </h3> -->
+                                    <!-- <p>$<%= products[i].Price %> </p> -->
+                                    <!-- <a href="/reviews/<%= actionMovies[i]._id %>" >
+                                        <input type="reviews" value="Reviews" class="btn btn-primary btn-block pb-2" style="width:100px;height:30px;">
+                                    </a> -->
+                                </br>
+                                </div>
+                                <div class="pt-5"></div>
+                            </div>
+                        </a>
+                    </div>
+                    <% } %> 
+                </div>
+
+
+                <div class="row">
+                        <h3>Animation Movies</h3>
+                        <% for(var i = 0; i < animationMovies.length; i++) { %>
+                        <div class="col-md-3 card p-5">
+                            <a href="/products/<%= animationMovies[i]._id %>">
+                                <div class="no-border" align="center">
+                                    <img src="<%= animationMovies[i].Image %>" style="width:170px;height:120px;">
+                                    <div class="caption" align="center">
+                                        <!-- <h3> <%= products[i].ProductName %> </h3> -->
+                                        <!-- <p>$<%= products[i].Price %> </p> -->
+                                        <!-- <a href="/reviews/<%= animationMovies[i]._id %>" >
+                                            <input type="reviews" value="Reviews" class="btn btn-primary btn-block pb-2" style="width:100px;height:30px;">
+                                        </a> -->
+                                    </br>
+                                    </div>
+                                    <div class="pt-5"></div>
+                                </div>
+                            </a>
+                        </div>
+                        <% } %> 
+                    </div>
+
+
+
+                    <div class="row">
+                            <h3>Fantasy Movies</h3>
+                            <% for(var i = 0; i < fantasyMovies.length; i++) { %>
+                            <div class="col-md-3 card p-5">
+                                <a href="/products/<%= fantasyMovies[i]._id %>">
+                                    <div class="no-border" align="center">
+                                        <img src="<%= fantasyMovies[i].Image %>" style="width:170px;height:120px;">
+                                        <div class="caption" align="center">
+                                            <!-- <h3> <%= products[i].ProductName %> </h3> -->
+                                            <!-- <p>$<%= products[i].Price %> </p> -->
+                                            <!-- <a href="/reviews/<%= fantasyMovies[i]._id %>" >
+                                                <input type="reviews" value="Reviews" class="btn btn-primary btn-block pb-2" style="width:100px;height:30px;">
+                                            </a> -->
+                                        </br>
+                                        </div>
+                                        <div class="pt-5"></div>
+                                    </div>
+                                </a>
+                            </div>
+                            <% } %> 
+                        </div>
+
+

@@ -1,0 +1,54 @@
+<% layout('layout') -%>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <img  alt=" N/A " src="<%= product.Image %>" style="width:600px;height:500px;" class="border">
+        </div>
+
+        <div class="col-md-4">
+            <h3><%= product.ProductName %></h3>
+            <h1>$<%= product.Price %></h1>
+            <p class="lead"><%= product.ProductDesc %></p>
+            <h5>Director :<%= product.director %></h5>
+            <h5>Year :<%= product.released %></h5>
+            <h5>Imdb Rating :<%= product.imdbRating %></h5>
+            <form method="post" >
+
+                     <input type="hidden" name="quantity" id="quantity"  class="form-control border border-dark"  placeholder="Quantity"  value=1>
+                     <input type="hidden" name="product_id" id="quantity"   class="form-control" value="<%= product.ProductID %>">
+                     <input type="hidden" name="priceHidden" id="priceHidden"  class="form-control" value="<%= product.Price %>">
+                     <input type="hidden" name="item" class="form-control" value="<%= product.ProductName %>">
+                       <p class="mt-2"></p>
+                     <!-- <input type="text" id="priceValue"  name="priceValue"  style="border: none;  background: transparent; border-color: transparent;" value="$<%= product.Price%>" readonly> -->
+
+                        <p class="mt-5"></p>
+                <% if(login) { %>
+                    <button type="submit" class="btn btn-primary btn-lg">Add to cart</button>
+                    <a href="/reviews/<%= product.productID %>" >
+                        <input type="button" value="Reviews" class="btn btn-primary btn-lg" >
+                    </a>
+                <% } else { %>
+                    <a href="/signup" class="btn btn-info btn-lg">Sign up to begin buying!</a>
+                <% } %>
+
+            </form>
+        </div>
+    </div>
+
+    
+    <div class="row">
+      <h3> Related Movies </h3>
+        <% for(var i = 0; i < recommendedProduct.length; i++) { %>
+            <div class="col-md-3 card pt-5">
+                <a href="/products/<%= recommendedProduct[i]._id %>">
+                    <div class="no-border" align="center">
+                        <img src="<%= recommendedProduct[i].Image %>" alt=" N/A " style="width:170px;height:120px;">
+                        <h3><%= recommendedProduct[i].ProductName %></h3>
+                        <div class="pt-5"></div>
+                    </div>
+                </a>
+            </div>
+            <% } %> 
+    </div>
+</div>

@@ -1,0 +1,9 @@
+module.exports.MONGOOSE_URL = "mongodb://54.214.184.72:27017/just_watch";
+module.exports.userloginServer ="http://localhost:5008";
+module.exports.productCatalogueServer = "http://localhost:5004";
+module.exports.cartServer = "http://localhost:5001";
+module.exports.orderServer = "http://localhost:5003";
+module.exports.paymentServer = "http://localhost:5007";
+module.exports.reviewServer = "http://localhost:5005";
+module.exports.recommedServer="http://localhost:6001/api"
+module.exports.apprioriServer="http://localhost:7001/appr"

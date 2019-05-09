@@ -1,0 +1,24 @@
+docker pull rohank2002/cmpe274:user
+docker run -d --name user -td -p 5008:5000 rohank2002/cmpe274:user
+
+
+docker pull rohank2002/cmpe274:product
+docker run -d --name product -td -p 5004:5001 rohank2002/cmpe274:product
+
+docker pull rohank2002/cmpe274:pay
+docker run -d --name pay  -td -p 5007:5004 rohank2002/cmpe274:pay
+
+docker pull rohank2002/cmpe274:cartv2
+docker run -d --name cartv2  -td -p 5001:6001 rohank2002/cmpe274:cartv2
+
+docker pull rohank2002/cmpe274:review
+docker run -d --name review  -td -p 5005:3000 rohank2002/cmpe274:review
+
+docker pull rohank2002/cmpe274:order
+docker run -d --name order  -td -p 5003:5003 rohank2002/cmpe274:order
+
+docker pull rohank2002/cmpe274:recommender
+docker run -d --name recommender  -td -p 6001:5000 rohank2002/cmpe274:recommender
+
+docker pull rohank2002/cmpe274:appriori
+docker run -d --name appriori  -td -p 7001:9000 rohank2002/cmpe274:appriori
